@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="adef40510e4946258329e449798bb6ff" Name="Diagram1">
+        <EntityTypeShape EntityType="MaoModel.Adoption" Width="1.5" PointX="5.25" PointY="6.75" />
+        <EntityTypeShape EntityType="MaoModel.AdpWish" Width="1.5" PointX="5.25" PointY="15.25" />
+        <EntityTypeShape EntityType="MaoModel.Article" Width="1.5" PointX="7.5" PointY="20.25" />
+        <EntityTypeShape EntityType="MaoModel.Board" Width="1.5" PointX="5.25" PointY="31.5" />
+        <EntityTypeShape EntityType="MaoModel.Categories" Width="1.5" PointX="3" PointY="3.125" />
+        <EntityTypeShape EntityType="MaoModel.Citys" Width="1.5" PointX="3" PointY="6.5" />
+        <EntityTypeShape EntityType="MaoModel.Comment" Width="1.5" PointX="9.75" PointY="16" />
+        <EntityTypeShape EntityType="MaoModel.Hospital" Width="1.5" PointX="3" PointY="19.75" />
+        <EntityTypeShape EntityType="MaoModel.NormalUser" Width="1.5" PointX="3" PointY="10.625" />
+        <EntityTypeShape EntityType="MaoModel.StoreUser" Width="1.5" PointX="3" PointY="15.875" />
+        <EntityTypeShape EntityType="MaoModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="0.75" />
+        <EntityTypeShape EntityType="MaoModel.TitleCategories" Width="1.5" PointX="5.25" PointY="21.25" />
+        <EntityTypeShape EntityType="MaoModel.UserPet" Width="1.5" PointX="8.25" PointY="11.5" />
+        <EntityTypeShape EntityType="MaoModel.UserStates" Width="1.5" PointX="0.75" PointY="13.625" />
+        <EntityTypeShape EntityType="MaoModel.Scorce" Width="1.5" PointX="5.25" PointY="11.75" />
+        <AssociationConnector Association="MaoModel.FK_Adoption_Categories" />
+        <AssociationConnector Association="MaoModel.FK_Adoption_Citys" />
+        <AssociationConnector Association="MaoModel.FK_Adoption_NormalUser" />
+        <AssociationConnector Association="MaoModel.FK_AdpWish_Categories" />
+        <AssociationConnector Association="MaoModel.FK_AdpWish_Citys" />
+        <AssociationConnector Association="MaoModel.FK_AdpWish_NormalUser" />
+        <AssociationConnector Association="MaoModel.FK_Article_Board" />
+        <AssociationConnector Association="MaoModel.FK_Article_NormalUser" />
+        <AssociationConnector Association="MaoModel.FK_Article_TitleCategories" />
+        <AssociationConnector Association="MaoModel.FK_Comment_Article" />
+        <AssociationConnector Association="MaoModel.FK_Board_NormalUser" />
+        <AssociationConnector Association="MaoModel.FK_Hospital_Categories" />
+        <AssociationConnector Association="MaoModel.FK_UserPet_Categories" />
+        <AssociationConnector Association="MaoModel.FK_Hospital_Citys" />
+        <AssociationConnector Association="MaoModel.FK_Comment_NormalUser" />
+        <AssociationConnector Association="MaoModel.FK_Scorce_Hospital" />
+        <AssociationConnector Association="MaoModel.FK_NormalUser_UserStates" />
+        <AssociationConnector Association="MaoModel.FK_Scorce_NormalUser" />
+        <AssociationConnector Association="MaoModel.FK_UserPet_NormalUser" />
+        <AssociationConnector Association="MaoModel.FK_StoreUser_UserStates" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
