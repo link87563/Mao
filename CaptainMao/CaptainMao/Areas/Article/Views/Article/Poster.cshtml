@@ -6,6 +6,12 @@
     ViewBag.Title = "個人文章管理";
     Layout = "~/Views/Shared/_MaoLayout.cshtml";
 }
+<script src="~/Scripts/jquery-3.1.1.min.js"></script>
+@section script{
+    <script>
+
+    </script>
+    }
 
 <aside class="col-lg-1 col-lg-offset-1 col-sm-1">
     <!-------------------asideOpen------------------->
@@ -20,9 +26,6 @@
             <div class="navbar-left">
                 @Html.ActionLink("主版", "Board", null, new { @class = "btn btn-info" })
                 @Html.ActionLink("文章列表", "Index", null, new { @class = "btn btn-info" })
-            </div>
-            <div class="navbar-right">
-                @Html.ActionLink("新增文章", "Create", "Article", null, new { @class = "btn btn-success glyphicon glyphicon-plus" })
             </div>
         </div>
         <div style="background-color:burlywood" class="drawingpin">
@@ -53,7 +56,8 @@
                             <td>@Html.DisplayFor(a => item.PosterID)</td>
                             <td>@Html.DisplayFor(a => item.Comment.Count) / @Html.DisplayFor(a => item.Number)</td>
                             <td>@Html.DisplayFor(a => item.LastChDateTime)</td>
-                            <td>@Html.ActionLink("修改", "Edit",new { articleID=item.ArticleID}, new { @class = "btn btn-info glyphicon glyphicon-pencil" })@Html.ActionLink("刪除","Del",null,new { @class= "btn btn-danger glyphicon glyphicon-remove" })</td>
+                            <td>
+                                @Html.ActionLink("修改", "Edit", new { articleID = item.ArticleID }, new { @class = "btn btn-info glyphicon glyphicon-pencil" }) @Html.ActionLink("刪除", "Del", new { articleID = item.ArticleID }, new { @class = "btn btn-danger glyphicon glyphicon-remove" })</td>
                         </tr>
                     }
                 </tbody>

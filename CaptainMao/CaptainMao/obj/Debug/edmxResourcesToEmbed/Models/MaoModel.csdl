@@ -1,111 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="MaoModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityContainer Name="MaoEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Adoption" EntityType="MaoModel.Adoption" />
-    <EntitySet Name="AdpWish" EntityType="MaoModel.AdpWish" />
-    <EntitySet Name="Article" EntityType="MaoModel.Article" />
-    <EntitySet Name="Board" EntityType="MaoModel.Board" />
-    <EntitySet Name="Categories" EntityType="MaoModel.Categories" />
-    <EntitySet Name="Citys" EntityType="MaoModel.Citys" />
-    <EntitySet Name="Comment" EntityType="MaoModel.Comment" />
-    <EntitySet Name="Hospital" EntityType="MaoModel.Hospital" />
-    <EntitySet Name="NormalUser" EntityType="MaoModel.NormalUser" />
-    <EntitySet Name="StoreUser" EntityType="MaoModel.StoreUser" />
-    <EntitySet Name="sysdiagrams" EntityType="MaoModel.sysdiagrams" />
-    <EntitySet Name="TitleCategories" EntityType="MaoModel.TitleCategories" />
-    <EntitySet Name="UserPet" EntityType="MaoModel.UserPet" />
-    <EntitySet Name="UserStates" EntityType="MaoModel.UserStates" />
-    <EntitySet Name="Scorce" EntityType="MaoModel.Scorce" />
-    <AssociationSet Name="FK_Adoption_Categories" Association="MaoModel.FK_Adoption_Categories">
-      <End Role="Categories" EntitySet="Categories" />
-      <End Role="Adoption" EntitySet="Adoption" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Adoption_Citys" Association="MaoModel.FK_Adoption_Citys">
-      <End Role="Citys" EntitySet="Citys" />
-      <End Role="Adoption" EntitySet="Adoption" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Adoption_NormalUser" Association="MaoModel.FK_Adoption_NormalUser">
-      <End Role="NormalUser" EntitySet="NormalUser" />
-      <End Role="Adoption" EntitySet="Adoption" />
-    </AssociationSet>
-    <AssociationSet Name="FK_AdpWish_Categories" Association="MaoModel.FK_AdpWish_Categories">
-      <End Role="Categories" EntitySet="Categories" />
-      <End Role="AdpWish" EntitySet="AdpWish" />
-    </AssociationSet>
-    <AssociationSet Name="FK_AdpWish_Citys" Association="MaoModel.FK_AdpWish_Citys">
-      <End Role="Citys" EntitySet="Citys" />
-      <End Role="AdpWish" EntitySet="AdpWish" />
-    </AssociationSet>
-    <AssociationSet Name="FK_AdpWish_NormalUser" Association="MaoModel.FK_AdpWish_NormalUser">
-      <End Role="NormalUser" EntitySet="NormalUser" />
-      <End Role="AdpWish" EntitySet="AdpWish" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Article_Board" Association="MaoModel.FK_Article_Board">
-      <End Role="Board" EntitySet="Board" />
-      <End Role="Article" EntitySet="Article" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Article_NormalUser" Association="MaoModel.FK_Article_NormalUser">
-      <End Role="NormalUser" EntitySet="NormalUser" />
-      <End Role="Article" EntitySet="Article" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Article_TitleCategories" Association="MaoModel.FK_Article_TitleCategories">
-      <End Role="TitleCategories" EntitySet="TitleCategories" />
-      <End Role="Article" EntitySet="Article" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Comment_Article" Association="MaoModel.FK_Comment_Article">
-      <End Role="Article" EntitySet="Article" />
-      <End Role="Comment" EntitySet="Comment" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Board_NormalUser" Association="MaoModel.FK_Board_NormalUser">
-      <End Role="NormalUser" EntitySet="NormalUser" />
-      <End Role="Board" EntitySet="Board" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Hospital_Categories" Association="MaoModel.FK_Hospital_Categories">
-      <End Role="Categories" EntitySet="Categories" />
-      <End Role="Hospital" EntitySet="Hospital" />
-    </AssociationSet>
-    <AssociationSet Name="FK_UserPet_Categories" Association="MaoModel.FK_UserPet_Categories">
-      <End Role="Categories" EntitySet="Categories" />
-      <End Role="UserPet" EntitySet="UserPet" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Hospital_Citys" Association="MaoModel.FK_Hospital_Citys">
-      <End Role="Citys" EntitySet="Citys" />
-      <End Role="Hospital" EntitySet="Hospital" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Comment_NormalUser" Association="MaoModel.FK_Comment_NormalUser">
-      <End Role="NormalUser" EntitySet="NormalUser" />
-      <End Role="Comment" EntitySet="Comment" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Scorce_Hospital" Association="MaoModel.FK_Scorce_Hospital">
-      <End Role="Hospital" EntitySet="Hospital" />
-      <End Role="Scorce" EntitySet="Scorce" />
-    </AssociationSet>
-    <AssociationSet Name="FK_NormalUser_UserStates" Association="MaoModel.FK_NormalUser_UserStates">
-      <End Role="UserStates" EntitySet="UserStates" />
-      <End Role="NormalUser" EntitySet="NormalUser" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Scorce_NormalUser" Association="MaoModel.FK_Scorce_NormalUser">
-      <End Role="NormalUser" EntitySet="NormalUser" />
-      <End Role="Scorce" EntitySet="Scorce" />
-    </AssociationSet>
-    <AssociationSet Name="FK_UserPet_NormalUser" Association="MaoModel.FK_UserPet_NormalUser">
-      <End Role="NormalUser" EntitySet="NormalUser" />
-      <End Role="UserPet" EntitySet="UserPet" />
-    </AssociationSet>
-    <AssociationSet Name="FK_StoreUser_UserStates" Association="MaoModel.FK_StoreUser_UserStates">
-      <End Role="UserStates" EntitySet="UserStates" />
-      <End Role="StoreUser" EntitySet="StoreUser" />
-    </AssociationSet>
-  </EntityContainer>
   <EntityType Name="Adoption">
     <Key>
       <PropertyRef Name="AdoptionID" />
     </Key>
     <Property Name="AdoptionID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Sex" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Sex" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="CategoryID" Type="Int32" Nullable="false" />
-    <Property Name="Build" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="Build" Type="String" MaxLength="10" FixedLength="true" Unicode="true" Nullable="false" />
     <Property Name="Age" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="CityID" Type="Int32" Nullable="false" />
     <Property Name="Hair" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
@@ -114,17 +17,17 @@
     <Property Name="BytesImage" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="PetImage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="DelCheck" Type="Boolean" Nullable="false" />
-    <Property Name="RegistrationUserID" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Categories" Relationship="MaoModel.FK_Adoption_Categories" FromRole="Adoption" ToRole="Categories" />
-    <NavigationProperty Name="Citys" Relationship="MaoModel.FK_Adoption_Citys" FromRole="Adoption" ToRole="Citys" />
-    <NavigationProperty Name="NormalUser" Relationship="MaoModel.FK_Adoption_NormalUser" FromRole="Adoption" ToRole="NormalUser" />
+    <Property Name="RegistrationUserID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Categories" Relationship="Self.FK_Adoption_Categories" FromRole="Adoption" ToRole="Categories" />
+    <NavigationProperty Name="Citys" Relationship="Self.FK_Adoption_Citys" FromRole="Adoption" ToRole="Citys" />
+    <NavigationProperty Name="NormalUser" Relationship="Self.FK_Adoption_NormalUser" FromRole="Adoption" ToRole="NormalUser" />
   </EntityType>
   <EntityType Name="AdpWish">
     <Key>
       <PropertyRef Name="WishID" />
     </Key>
     <Property Name="WishID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="UserID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Sex" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="CategoryID" Type="Int32" Nullable="false" />
     <Property Name="Build" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
@@ -132,9 +35,9 @@
     <Property Name="CityID" Type="Int32" Nullable="false" />
     <Property Name="Hair" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
     <Property Name="PostDate" Type="DateTime" Nullable="false" Precision="3" />
-    <NavigationProperty Name="Categories" Relationship="MaoModel.FK_AdpWish_Categories" FromRole="AdpWish" ToRole="Categories" />
-    <NavigationProperty Name="Citys" Relationship="MaoModel.FK_AdpWish_Citys" FromRole="AdpWish" ToRole="Citys" />
-    <NavigationProperty Name="NormalUser" Relationship="MaoModel.FK_AdpWish_NormalUser" FromRole="AdpWish" ToRole="NormalUser" />
+    <NavigationProperty Name="Categories" Relationship="Self.FK_AdpWish_Categories" FromRole="AdpWish" ToRole="Categories" />
+    <NavigationProperty Name="Citys" Relationship="Self.FK_AdpWish_Citys" FromRole="AdpWish" ToRole="Citys" />
+    <NavigationProperty Name="NormalUser" Relationship="Self.FK_AdpWish_NormalUser" FromRole="AdpWish" ToRole="NormalUser" />
   </EntityType>
   <EntityType Name="Article">
     <Key>
@@ -142,49 +45,49 @@
     </Key>
     <Property Name="ArticleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="BoardID" Type="Int32" Nullable="false" />
-    <Property Name="PosterID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="PosterID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
     <Property Name="TitleCategoryID" Type="Int32" Nullable="false" />
     <Property Name="ContentText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="CreateDateTime" Type="DateTime" Precision="3" />
     <Property Name="LastChDateTime" Type="DateTime" Precision="3" />
-    <Property Name="Number" Type="Int32" annotation:StoreGeneratedPattern="None" />
+    <Property Name="Number" Type="Int32" />
     <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
-    <NavigationProperty Name="Board" Relationship="MaoModel.FK_Article_Board" FromRole="Article" ToRole="Board" />
-    <NavigationProperty Name="NormalUser" Relationship="MaoModel.FK_Article_NormalUser" FromRole="Article" ToRole="NormalUser" />
-    <NavigationProperty Name="TitleCategories" Relationship="MaoModel.FK_Article_TitleCategories" FromRole="Article" ToRole="TitleCategories" />
-    <NavigationProperty Name="Comment" Relationship="MaoModel.FK_Comment_Article" FromRole="Article" ToRole="Comment" />
+    <NavigationProperty Name="Board" Relationship="Self.FK_Article_Board" FromRole="Article" ToRole="Board" />
+    <NavigationProperty Name="NormalUser" Relationship="Self.FK_Article_NormalUser" FromRole="Article" ToRole="NormalUser" />
+    <NavigationProperty Name="TitleCategories" Relationship="Self.FK_Article_TitleCategories" FromRole="Article" ToRole="TitleCategories" />
+    <NavigationProperty Name="Comment" Relationship="Self.FK_Comment_Article" FromRole="Article" ToRole="Comment" />
   </EntityType>
   <EntityType Name="Board">
     <Key>
       <PropertyRef Name="BoardID" />
     </Key>
     <Property Name="BoardID" Type="Int32" Nullable="false" />
-    <Property Name="BoardName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="MasterUserID" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Article" Relationship="MaoModel.FK_Article_Board" FromRole="Board" ToRole="Article" />
-    <NavigationProperty Name="NormalUser" Relationship="MaoModel.FK_Board_NormalUser" FromRole="Board" ToRole="NormalUser" />
+    <Property Name="BoardName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="MasterUserID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Article" Relationship="Self.FK_Article_Board" FromRole="Board" ToRole="Article" />
+    <NavigationProperty Name="NormalUser" Relationship="Self.FK_Board_NormalUser" FromRole="Board" ToRole="NormalUser" />
   </EntityType>
   <EntityType Name="Categories">
     <Key>
       <PropertyRef Name="CategoryID" />
     </Key>
     <Property Name="CategoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="CategoryName" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Adoption" Relationship="MaoModel.FK_Adoption_Categories" FromRole="Categories" ToRole="Adoption" />
-    <NavigationProperty Name="AdpWish" Relationship="MaoModel.FK_AdpWish_Categories" FromRole="Categories" ToRole="AdpWish" />
-    <NavigationProperty Name="Hospital" Relationship="MaoModel.FK_Hospital_Categories" FromRole="Categories" ToRole="Hospital" />
-    <NavigationProperty Name="UserPet" Relationship="MaoModel.FK_UserPet_Categories" FromRole="Categories" ToRole="UserPet" />
+    <Property Name="CategoryName" Type="String" MaxLength="10" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Adoption" Relationship="Self.FK_Adoption_Categories" FromRole="Categories" ToRole="Adoption" />
+    <NavigationProperty Name="AdpWish" Relationship="Self.FK_AdpWish_Categories" FromRole="Categories" ToRole="AdpWish" />
+    <NavigationProperty Name="Hospital" Relationship="Self.FK_Hospital_Categories" FromRole="Categories" ToRole="Hospital" />
+    <NavigationProperty Name="UserPet" Relationship="Self.FK_UserPet_Categories" FromRole="Categories" ToRole="UserPet" />
   </EntityType>
   <EntityType Name="Citys">
     <Key>
       <PropertyRef Name="CityID" />
     </Key>
     <Property Name="CityID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="CityName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Adoption" Relationship="MaoModel.FK_Adoption_Citys" FromRole="Citys" ToRole="Adoption" />
-    <NavigationProperty Name="AdpWish" Relationship="MaoModel.FK_AdpWish_Citys" FromRole="Citys" ToRole="AdpWish" />
-    <NavigationProperty Name="Hospital" Relationship="MaoModel.FK_Hospital_Citys" FromRole="Citys" ToRole="Hospital" />
+    <Property Name="CityName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Adoption" Relationship="Self.FK_Adoption_Citys" FromRole="Citys" ToRole="Adoption" />
+    <NavigationProperty Name="AdpWish" Relationship="Self.FK_AdpWish_Citys" FromRole="Citys" ToRole="AdpWish" />
+    <NavigationProperty Name="Hospital" Relationship="Self.FK_Hospital_Citys" FromRole="Citys" ToRole="Hospital" />
   </EntityType>
   <EntityType Name="Comment">
     <Key>
@@ -192,42 +95,42 @@
     </Key>
     <Property Name="ArticleID" Type="Int32" Nullable="false" />
     <Property Name="CommentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="PosterID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="PosterID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="ContentText" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <Property Name="NewDateTime" Type="DateTime" Precision="3" />
-    <NavigationProperty Name="Article" Relationship="MaoModel.FK_Comment_Article" FromRole="Comment" ToRole="Article" />
-    <NavigationProperty Name="NormalUser" Relationship="MaoModel.FK_Comment_NormalUser" FromRole="Comment" ToRole="NormalUser" />
+    <NavigationProperty Name="Article" Relationship="Self.FK_Comment_Article" FromRole="Comment" ToRole="Article" />
+    <NavigationProperty Name="NormalUser" Relationship="Self.FK_Comment_NormalUser" FromRole="Comment" ToRole="NormalUser" />
   </EntityType>
   <EntityType Name="Hospital">
     <Key>
       <PropertyRef Name="HospitalID" />
     </Key>
     <Property Name="HospitalID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="HospitalName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="HospitalAddress" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HospitalName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="HospitalAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="AddressArea" Type="Int32" Nullable="false" />
-    <Property Name="HospitalPhone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="HospitalPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="CategoryID" Type="Int32" Nullable="false" />
-    <Property Name="BusinessHours" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BusinessHours" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Emergency" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="OutpatientProject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Equipment" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="WebAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="OnlineConsultation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="OnView" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OnView" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Map" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Categories" Relationship="MaoModel.FK_Hospital_Categories" FromRole="Hospital" ToRole="Categories" />
-    <NavigationProperty Name="Citys" Relationship="MaoModel.FK_Hospital_Citys" FromRole="Hospital" ToRole="Citys" />
-    <NavigationProperty Name="Scorce" Relationship="MaoModel.FK_Scorce_Hospital" FromRole="Hospital" ToRole="Scorce" />
+    <NavigationProperty Name="Categories" Relationship="Self.FK_Hospital_Categories" FromRole="Hospital" ToRole="Categories" />
+    <NavigationProperty Name="Citys" Relationship="Self.FK_Hospital_Citys" FromRole="Hospital" ToRole="Citys" />
+    <NavigationProperty Name="Scorce" Relationship="Self.FK_Scorce_Hospital" FromRole="Hospital" ToRole="Scorce" />
   </EntityType>
   <EntityType Name="NormalUser">
     <Key>
       <PropertyRef Name="UserID" />
     </Key>
-    <Property Name="UserID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
-    <Property Name="Email" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="LastName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="FirstName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Photo" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="LoginCount" Type="Int32" Nullable="false" />
@@ -235,33 +138,33 @@
     <Property Name="BoardManagerOf" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="DateRegistered" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="StateCode" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Adoption" Relationship="MaoModel.FK_Adoption_NormalUser" FromRole="NormalUser" ToRole="Adoption" />
-    <NavigationProperty Name="AdpWish" Relationship="MaoModel.FK_AdpWish_NormalUser" FromRole="NormalUser" ToRole="AdpWish" />
-    <NavigationProperty Name="Article" Relationship="MaoModel.FK_Article_NormalUser" FromRole="NormalUser" ToRole="Article" />
-    <NavigationProperty Name="Board" Relationship="MaoModel.FK_Board_NormalUser" FromRole="NormalUser" ToRole="Board" />
-    <NavigationProperty Name="Comment" Relationship="MaoModel.FK_Comment_NormalUser" FromRole="NormalUser" ToRole="Comment" />
-    <NavigationProperty Name="UserStates" Relationship="MaoModel.FK_NormalUser_UserStates" FromRole="NormalUser" ToRole="UserStates" />
-    <NavigationProperty Name="Scorce" Relationship="MaoModel.FK_Scorce_NormalUser" FromRole="NormalUser" ToRole="Scorce" />
-    <NavigationProperty Name="UserPet" Relationship="MaoModel.FK_UserPet_NormalUser" FromRole="NormalUser" ToRole="UserPet" />
+    <NavigationProperty Name="Adoption" Relationship="Self.FK_Adoption_NormalUser" FromRole="NormalUser" ToRole="Adoption" />
+    <NavigationProperty Name="AdpWish" Relationship="Self.FK_AdpWish_NormalUser" FromRole="NormalUser" ToRole="AdpWish" />
+    <NavigationProperty Name="Article" Relationship="Self.FK_Article_NormalUser" FromRole="NormalUser" ToRole="Article" />
+    <NavigationProperty Name="Board" Relationship="Self.FK_Board_NormalUser" FromRole="NormalUser" ToRole="Board" />
+    <NavigationProperty Name="Comment" Relationship="Self.FK_Comment_NormalUser" FromRole="NormalUser" ToRole="Comment" />
+    <NavigationProperty Name="UserStates" Relationship="Self.FK_NormalUser_UserStates" FromRole="NormalUser" ToRole="UserStates" />
+    <NavigationProperty Name="Scorce" Relationship="Self.FK_Scorce_NormalUser" FromRole="NormalUser" ToRole="Scorce" />
+    <NavigationProperty Name="UserPet" Relationship="Self.FK_UserPet_NormalUser" FromRole="NormalUser" ToRole="UserPet" />
   </EntityType>
   <EntityType Name="StoreUser">
     <Key>
       <PropertyRef Name="StoreID" />
     </Key>
     <Property Name="StoreID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="StoreName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Contact" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Address" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="StoreName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Contact" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="DateRegistered" Type="DateTime" Nullable="false" Precision="0" />
     <Property Name="StateCode" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="UserStates" Relationship="MaoModel.FK_StoreUser_UserStates" FromRole="StoreUser" ToRole="UserStates" />
+    <NavigationProperty Name="UserStates" Relationship="Self.FK_StoreUser_UserStates" FromRole="StoreUser" ToRole="UserStates" />
   </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
     </Key>
-    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="principal_id" Type="Int32" Nullable="false" />
     <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="version" Type="Int32" />
@@ -272,48 +175,48 @@
       <PropertyRef Name="TitleCategoryID" />
     </Key>
     <Property Name="TitleCategoryID" Type="Int32" Nullable="false" />
-    <Property Name="TitleCategoryName" Type="String" Nullable="false" MaxLength="30" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Article" Relationship="MaoModel.FK_Article_TitleCategories" FromRole="TitleCategories" ToRole="Article" />
+    <Property Name="TitleCategoryName" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Article" Relationship="Self.FK_Article_TitleCategories" FromRole="TitleCategories" ToRole="Article" />
   </EntityType>
   <EntityType Name="UserPet">
     <Key>
       <PropertyRef Name="PetID" />
     </Key>
     <Property Name="PetID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="PetName" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <Property Name="UserID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="PetName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UserID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="CategoryID" Type="Int32" Nullable="false" />
     <Property Name="PetSex" Type="Boolean" />
     <Property Name="PetPhoto" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="PetBirthday" Type="DateTime" Precision="0" />
-    <NavigationProperty Name="Categories" Relationship="MaoModel.FK_UserPet_Categories" FromRole="UserPet" ToRole="Categories" />
-    <NavigationProperty Name="NormalUser" Relationship="MaoModel.FK_UserPet_NormalUser" FromRole="UserPet" ToRole="NormalUser" />
+    <NavigationProperty Name="Categories" Relationship="Self.FK_UserPet_Categories" FromRole="UserPet" ToRole="Categories" />
+    <NavigationProperty Name="NormalUser" Relationship="Self.FK_UserPet_NormalUser" FromRole="UserPet" ToRole="NormalUser" />
   </EntityType>
   <EntityType Name="UserStates">
     <Key>
       <PropertyRef Name="StateCode" />
     </Key>
     <Property Name="StateCode" Type="Int32" Nullable="false" />
-    <Property Name="StateDescription" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="NormalUser" Relationship="MaoModel.FK_NormalUser_UserStates" FromRole="UserStates" ToRole="NormalUser" />
-    <NavigationProperty Name="StoreUser" Relationship="MaoModel.FK_StoreUser_UserStates" FromRole="UserStates" ToRole="StoreUser" />
+    <Property Name="StateDescription" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="NormalUser" Relationship="Self.FK_NormalUser_UserStates" FromRole="UserStates" ToRole="NormalUser" />
+    <NavigationProperty Name="StoreUser" Relationship="Self.FK_StoreUser_UserStates" FromRole="UserStates" ToRole="StoreUser" />
   </EntityType>
   <EntityType Name="Scorce">
     <Key>
       <PropertyRef Name="UserID" />
       <PropertyRef Name="HospitalID" />
     </Key>
-    <Property Name="UserID" Type="String" Nullable="false" MaxLength="4" FixedLength="false" Unicode="true" />
+    <Property Name="UserID" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="HospitalID" Type="Int32" Nullable="false" />
     <Property Name="Scorce1" Type="Int32" />
     <Property Name="Date" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="NoteValue" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Hospital" Relationship="MaoModel.FK_Scorce_Hospital" FromRole="Scorce" ToRole="Hospital" />
-    <NavigationProperty Name="NormalUser" Relationship="MaoModel.FK_Scorce_NormalUser" FromRole="Scorce" ToRole="NormalUser" />
+    <NavigationProperty Name="Hospital" Relationship="Self.FK_Scorce_Hospital" FromRole="Scorce" ToRole="Hospital" />
+    <NavigationProperty Name="NormalUser" Relationship="Self.FK_Scorce_NormalUser" FromRole="Scorce" ToRole="NormalUser" />
   </EntityType>
   <Association Name="FK_Adoption_Categories">
-    <End Type="MaoModel.Categories" Role="Categories" Multiplicity="1" />
-    <End Type="MaoModel.Adoption" Role="Adoption" Multiplicity="*" />
+    <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+    <End Role="Adoption" Type="Self.Adoption" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Categories">
         <PropertyRef Name="CategoryID" />
@@ -324,8 +227,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Adoption_Citys">
-    <End Type="MaoModel.Citys" Role="Citys" Multiplicity="1" />
-    <End Type="MaoModel.Adoption" Role="Adoption" Multiplicity="*" />
+    <End Role="Citys" Type="Self.Citys" Multiplicity="1" />
+    <End Role="Adoption" Type="Self.Adoption" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Citys">
         <PropertyRef Name="CityID" />
@@ -336,8 +239,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Adoption_NormalUser">
-    <End Type="MaoModel.NormalUser" Role="NormalUser" Multiplicity="0..1" />
-    <End Type="MaoModel.Adoption" Role="Adoption" Multiplicity="*" />
+    <End Role="NormalUser" Type="Self.NormalUser" Multiplicity="0..1" />
+    <End Role="Adoption" Type="Self.Adoption" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NormalUser">
         <PropertyRef Name="UserID" />
@@ -348,8 +251,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_AdpWish_Categories">
-    <End Type="MaoModel.Categories" Role="Categories" Multiplicity="1" />
-    <End Type="MaoModel.AdpWish" Role="AdpWish" Multiplicity="*" />
+    <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+    <End Role="AdpWish" Type="Self.AdpWish" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Categories">
         <PropertyRef Name="CategoryID" />
@@ -360,8 +263,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_AdpWish_Citys">
-    <End Type="MaoModel.Citys" Role="Citys" Multiplicity="1" />
-    <End Type="MaoModel.AdpWish" Role="AdpWish" Multiplicity="*" />
+    <End Role="Citys" Type="Self.Citys" Multiplicity="1" />
+    <End Role="AdpWish" Type="Self.AdpWish" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Citys">
         <PropertyRef Name="CityID" />
@@ -372,8 +275,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_AdpWish_NormalUser">
-    <End Type="MaoModel.NormalUser" Role="NormalUser" Multiplicity="1" />
-    <End Type="MaoModel.AdpWish" Role="AdpWish" Multiplicity="*" />
+    <End Role="NormalUser" Type="Self.NormalUser" Multiplicity="1" />
+    <End Role="AdpWish" Type="Self.AdpWish" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NormalUser">
         <PropertyRef Name="UserID" />
@@ -384,8 +287,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Article_Board">
-    <End Type="MaoModel.Board" Role="Board" Multiplicity="1" />
-    <End Type="MaoModel.Article" Role="Article" Multiplicity="*" />
+    <End Role="Board" Type="Self.Board" Multiplicity="1" />
+    <End Role="Article" Type="Self.Article" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Board">
         <PropertyRef Name="BoardID" />
@@ -396,8 +299,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Article_NormalUser">
-    <End Type="MaoModel.NormalUser" Role="NormalUser" Multiplicity="1" />
-    <End Type="MaoModel.Article" Role="Article" Multiplicity="*" />
+    <End Role="NormalUser" Type="Self.NormalUser" Multiplicity="1" />
+    <End Role="Article" Type="Self.Article" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NormalUser">
         <PropertyRef Name="UserID" />
@@ -408,8 +311,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Article_TitleCategories">
-    <End Type="MaoModel.TitleCategories" Role="TitleCategories" Multiplicity="1" />
-    <End Type="MaoModel.Article" Role="Article" Multiplicity="*" />
+    <End Role="TitleCategories" Type="Self.TitleCategories" Multiplicity="1" />
+    <End Role="Article" Type="Self.Article" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="TitleCategories">
         <PropertyRef Name="TitleCategoryID" />
@@ -420,8 +323,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Comment_Article">
-    <End Type="MaoModel.Article" Role="Article" Multiplicity="1" />
-    <End Type="MaoModel.Comment" Role="Comment" Multiplicity="*" />
+    <End Role="Article" Type="Self.Article" Multiplicity="1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Article">
         <PropertyRef Name="ArticleID" />
@@ -432,8 +335,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Board_NormalUser">
-    <End Type="MaoModel.NormalUser" Role="NormalUser" Multiplicity="0..1" />
-    <End Type="MaoModel.Board" Role="Board" Multiplicity="*" />
+    <End Role="NormalUser" Type="Self.NormalUser" Multiplicity="0..1" />
+    <End Role="Board" Type="Self.Board" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NormalUser">
         <PropertyRef Name="UserID" />
@@ -444,8 +347,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Hospital_Categories">
-    <End Type="MaoModel.Categories" Role="Categories" Multiplicity="1" />
-    <End Type="MaoModel.Hospital" Role="Hospital" Multiplicity="*" />
+    <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+    <End Role="Hospital" Type="Self.Hospital" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Categories">
         <PropertyRef Name="CategoryID" />
@@ -456,8 +359,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_UserPet_Categories">
-    <End Type="MaoModel.Categories" Role="Categories" Multiplicity="1" />
-    <End Type="MaoModel.UserPet" Role="UserPet" Multiplicity="*" />
+    <End Role="Categories" Type="Self.Categories" Multiplicity="1" />
+    <End Role="UserPet" Type="Self.UserPet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Categories">
         <PropertyRef Name="CategoryID" />
@@ -468,8 +371,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Hospital_Citys">
-    <End Type="MaoModel.Citys" Role="Citys" Multiplicity="1" />
-    <End Type="MaoModel.Hospital" Role="Hospital" Multiplicity="*" />
+    <End Role="Citys" Type="Self.Citys" Multiplicity="1" />
+    <End Role="Hospital" Type="Self.Hospital" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Citys">
         <PropertyRef Name="CityID" />
@@ -480,8 +383,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Comment_NormalUser">
-    <End Type="MaoModel.NormalUser" Role="NormalUser" Multiplicity="1" />
-    <End Type="MaoModel.Comment" Role="Comment" Multiplicity="*" />
+    <End Role="NormalUser" Type="Self.NormalUser" Multiplicity="1" />
+    <End Role="Comment" Type="Self.Comment" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NormalUser">
         <PropertyRef Name="UserID" />
@@ -492,8 +395,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Scorce_Hospital">
-    <End Type="MaoModel.Hospital" Role="Hospital" Multiplicity="1" />
-    <End Type="MaoModel.Scorce" Role="Scorce" Multiplicity="*" />
+    <End Role="Hospital" Type="Self.Hospital" Multiplicity="1" />
+    <End Role="Scorce" Type="Self.Scorce" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Hospital">
         <PropertyRef Name="HospitalID" />
@@ -504,8 +407,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_NormalUser_UserStates">
-    <End Type="MaoModel.UserStates" Role="UserStates" Multiplicity="1" />
-    <End Type="MaoModel.NormalUser" Role="NormalUser" Multiplicity="*" />
+    <End Role="UserStates" Type="Self.UserStates" Multiplicity="1" />
+    <End Role="NormalUser" Type="Self.NormalUser" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="UserStates">
         <PropertyRef Name="StateCode" />
@@ -516,8 +419,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Scorce_NormalUser">
-    <End Type="MaoModel.NormalUser" Role="NormalUser" Multiplicity="1" />
-    <End Type="MaoModel.Scorce" Role="Scorce" Multiplicity="*" />
+    <End Role="NormalUser" Type="Self.NormalUser" Multiplicity="1" />
+    <End Role="Scorce" Type="Self.Scorce" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NormalUser">
         <PropertyRef Name="UserID" />
@@ -528,8 +431,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_UserPet_NormalUser">
-    <End Type="MaoModel.NormalUser" Role="NormalUser" Multiplicity="1" />
-    <End Type="MaoModel.UserPet" Role="UserPet" Multiplicity="*" />
+    <End Role="NormalUser" Type="Self.NormalUser" Multiplicity="1" />
+    <End Role="UserPet" Type="Self.UserPet" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="NormalUser">
         <PropertyRef Name="UserID" />
@@ -540,8 +443,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_StoreUser_UserStates">
-    <End Type="MaoModel.UserStates" Role="UserStates" Multiplicity="1" />
-    <End Type="MaoModel.StoreUser" Role="StoreUser" Multiplicity="*" />
+    <End Role="UserStates" Type="Self.UserStates" Multiplicity="1" />
+    <End Role="StoreUser" Type="Self.StoreUser" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="UserStates">
         <PropertyRef Name="StateCode" />
@@ -551,4 +454,101 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <EntityContainer Name="MaoEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Adoption" EntityType="Self.Adoption" />
+    <EntitySet Name="AdpWish" EntityType="Self.AdpWish" />
+    <EntitySet Name="Article" EntityType="Self.Article" />
+    <EntitySet Name="Board" EntityType="Self.Board" />
+    <EntitySet Name="Categories" EntityType="Self.Categories" />
+    <EntitySet Name="Citys" EntityType="Self.Citys" />
+    <EntitySet Name="Comment" EntityType="Self.Comment" />
+    <EntitySet Name="Hospital" EntityType="Self.Hospital" />
+    <EntitySet Name="NormalUser" EntityType="Self.NormalUser" />
+    <EntitySet Name="StoreUser" EntityType="Self.StoreUser" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TitleCategories" EntityType="Self.TitleCategories" />
+    <EntitySet Name="UserPet" EntityType="Self.UserPet" />
+    <EntitySet Name="UserStates" EntityType="Self.UserStates" />
+    <EntitySet Name="Scorce" EntityType="Self.Scorce" />
+    <AssociationSet Name="FK_Adoption_Categories" Association="Self.FK_Adoption_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Adoption" EntitySet="Adoption" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Adoption_Citys" Association="Self.FK_Adoption_Citys">
+      <End Role="Citys" EntitySet="Citys" />
+      <End Role="Adoption" EntitySet="Adoption" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Adoption_NormalUser" Association="Self.FK_Adoption_NormalUser">
+      <End Role="NormalUser" EntitySet="NormalUser" />
+      <End Role="Adoption" EntitySet="Adoption" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdpWish_Categories" Association="Self.FK_AdpWish_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="AdpWish" EntitySet="AdpWish" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdpWish_Citys" Association="Self.FK_AdpWish_Citys">
+      <End Role="Citys" EntitySet="Citys" />
+      <End Role="AdpWish" EntitySet="AdpWish" />
+    </AssociationSet>
+    <AssociationSet Name="FK_AdpWish_NormalUser" Association="Self.FK_AdpWish_NormalUser">
+      <End Role="NormalUser" EntitySet="NormalUser" />
+      <End Role="AdpWish" EntitySet="AdpWish" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Article_Board" Association="Self.FK_Article_Board">
+      <End Role="Board" EntitySet="Board" />
+      <End Role="Article" EntitySet="Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Article_NormalUser" Association="Self.FK_Article_NormalUser">
+      <End Role="NormalUser" EntitySet="NormalUser" />
+      <End Role="Article" EntitySet="Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Article_TitleCategories" Association="Self.FK_Article_TitleCategories">
+      <End Role="TitleCategories" EntitySet="TitleCategories" />
+      <End Role="Article" EntitySet="Article" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comment_Article" Association="Self.FK_Comment_Article">
+      <End Role="Article" EntitySet="Article" />
+      <End Role="Comment" EntitySet="Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Board_NormalUser" Association="Self.FK_Board_NormalUser">
+      <End Role="NormalUser" EntitySet="NormalUser" />
+      <End Role="Board" EntitySet="Board" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hospital_Categories" Association="Self.FK_Hospital_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="Hospital" EntitySet="Hospital" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserPet_Categories" Association="Self.FK_UserPet_Categories">
+      <End Role="Categories" EntitySet="Categories" />
+      <End Role="UserPet" EntitySet="UserPet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Hospital_Citys" Association="Self.FK_Hospital_Citys">
+      <End Role="Citys" EntitySet="Citys" />
+      <End Role="Hospital" EntitySet="Hospital" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comment_NormalUser" Association="Self.FK_Comment_NormalUser">
+      <End Role="NormalUser" EntitySet="NormalUser" />
+      <End Role="Comment" EntitySet="Comment" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Scorce_Hospital" Association="Self.FK_Scorce_Hospital">
+      <End Role="Hospital" EntitySet="Hospital" />
+      <End Role="Scorce" EntitySet="Scorce" />
+    </AssociationSet>
+    <AssociationSet Name="FK_NormalUser_UserStates" Association="Self.FK_NormalUser_UserStates">
+      <End Role="UserStates" EntitySet="UserStates" />
+      <End Role="NormalUser" EntitySet="NormalUser" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Scorce_NormalUser" Association="Self.FK_Scorce_NormalUser">
+      <End Role="NormalUser" EntitySet="NormalUser" />
+      <End Role="Scorce" EntitySet="Scorce" />
+    </AssociationSet>
+    <AssociationSet Name="FK_UserPet_NormalUser" Association="Self.FK_UserPet_NormalUser">
+      <End Role="NormalUser" EntitySet="NormalUser" />
+      <End Role="UserPet" EntitySet="UserPet" />
+    </AssociationSet>
+    <AssociationSet Name="FK_StoreUser_UserStates" Association="Self.FK_StoreUser_UserStates">
+      <End Role="UserStates" EntitySet="UserStates" />
+      <End Role="StoreUser" EntitySet="StoreUser" />
+    </AssociationSet>
+  </EntityContainer>
 </Schema>

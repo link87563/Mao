@@ -17,14 +17,14 @@
     <Property Name="BytesImage" Type="image" />
     <Property Name="PetImage" Type="nvarchar" MaxLength="50" />
     <Property Name="DelCheck" Type="bit" Nullable="false" />
-    <Property Name="RegistrationUserID" Type="nvarchar" MaxLength="4" />
+    <Property Name="RegistrationUserID" Type="nvarchar" MaxLength="128" />
   </EntityType>
   <EntityType Name="AdpWish">
     <Key>
       <PropertyRef Name="WishID" />
     </Key>
     <Property Name="WishID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="UserID" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
     <Property Name="Sex" Type="nchar" MaxLength="10" />
     <Property Name="CategoryID" Type="int" Nullable="false" />
     <Property Name="Build" Type="nchar" MaxLength="10" />
@@ -39,13 +39,13 @@
     </Key>
     <Property Name="ArticleID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="BoardID" Type="int" Nullable="false" />
-    <Property Name="PosterID" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="PosterID" Type="nvarchar" MaxLength="128" Nullable="false" />
     <Property Name="Title" Type="nvarchar" MaxLength="200" />
     <Property Name="TitleCategoryID" Type="int" Nullable="false" />
     <Property Name="ContentText" Type="nvarchar(max)" />
     <Property Name="CreateDateTime" Type="datetime" />
     <Property Name="LastChDateTime" Type="datetime" />
-    <Property Name="Number" Type="int" StoreGeneratedPattern="None" />
+    <Property Name="Number" Type="int" />
     <Property Name="IsDeleted" Type="bit" Nullable="false" />
   </EntityType>
   <EntityType Name="Board">
@@ -54,7 +54,7 @@
     </Key>
     <Property Name="BoardID" Type="int" Nullable="false" />
     <Property Name="BoardName" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="MasterUserID" Type="nvarchar" MaxLength="4" />
+    <Property Name="MasterUserID" Type="nvarchar" MaxLength="128" />
   </EntityType>
   <EntityType Name="Categories">
     <Key>
@@ -76,7 +76,7 @@
     </Key>
     <Property Name="ArticleID" Type="int" Nullable="false" />
     <Property Name="CommentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="PosterID" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="PosterID" Type="nvarchar" MaxLength="128" Nullable="false" />
     <Property Name="ContentText" Type="nvarchar(max)" />
     <Property Name="NewDateTime" Type="datetime" />
   </EntityType>
@@ -103,7 +103,7 @@
     <Key>
       <PropertyRef Name="UserID" />
     </Key>
-    <Property Name="UserID" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
     <Property Name="Email" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="LastName" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="FirstName" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -122,7 +122,7 @@
       <PropertyRef Name="UserID" />
       <PropertyRef Name="HospitalID" />
     </Key>
-    <Property Name="UserID" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
     <Property Name="HospitalID" Type="int" Nullable="false" />
     <Property Name="Scorce" Type="int" />
     <Property Name="Date" Type="nvarchar" MaxLength="50" />
@@ -163,7 +163,7 @@
     </Key>
     <Property Name="PetID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="PetName" Type="nvarchar" MaxLength="20" Nullable="false" />
-    <Property Name="UserID" Type="nvarchar" MaxLength="4" Nullable="false" />
+    <Property Name="UserID" Type="nvarchar" MaxLength="128" Nullable="false" />
     <Property Name="CategoryID" Type="int" Nullable="false" />
     <Property Name="PetSex" Type="bit" />
     <Property Name="PetPhoto" Type="varbinary(max)" />
